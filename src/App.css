@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #BBDCE5;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.error {
+  background: #ffebee;
+  border: 1px solid #ef5350;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #D9C4B0;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #ECEEDF;
+  border-radius: 6px;
+}
+
+.indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.indicator.on {
+  background: #4CAF50;
+}
+
+.indicator.off {
+  background: #9E9E9E;
+}
+
+.status span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Controles */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-on {
+  background: #CFAB8D;
+  color: #fff;
+}
+
+.btn-off {
+  background: #BBDCE5;
+  color: #333;
+}
+
+/* Logs */
+.logs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+.log-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.log-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.log-dot.on {
+  background: #4CAF50;
+}
+
+.log-dot.off {
+  background: #9E9E9E;
+}
+
+.log-info {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.log-type {
+  font-weight: 500;
+  color: #333;
+}
+
+.log-time {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.log-duration {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
