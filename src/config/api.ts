@@ -2,7 +2,7 @@
 // IP do Serial Monitor do Arduino após conectar no Wi-Fi
 
 export const API_CONFIG = {
-  BASE_URL: 'http://192.168.1.100', // ⚠️ SUBSTITUA pelo IP do seu ESP32
+  BASE_URL: 'http://10.37.0.178', // ⚠️ SUBSTITUA pelo IP do seu ESP32
 
   ENDPOINTS: {
     STATUS: '/status',      // GET - Retorna estatísticas gerais
